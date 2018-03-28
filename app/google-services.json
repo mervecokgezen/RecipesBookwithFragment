@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "639218879982",
+    "firebase_url": "https://recipebookv2.firebaseio.com",
+    "project_id": "recipebookv2",
+    "storage_bucket": "recipebookv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639218879982:android:6decf57a2389b439",
+        "android_client_info": {
+          "package_name": "com.examples.vestel.recipebookv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639218879982-uvtcbk2q6khijske0h7qsn9dcmh9ge48.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.examples.vestel.recipebookv2",
+            "certificate_hash": "f756df236ed10c1a22486d808c6599660de7f76f"
+          }
+        },
+        {
+          "client_id": "639218879982-aopatuar0l9g48hj371pos92futl1ju1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgTRIgadVkI7U-0oqQFjy3tJer6194-mc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639218879982-aopatuar0l9g48hj371pos92futl1ju1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

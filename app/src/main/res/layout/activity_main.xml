@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context="com.examples.vestel.recipebookv2.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bilbo_swash_caps"
+                android:text="Tarif Defterim"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mail : "
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail adresinizi giriniz..."
+                android:id="@+id/edt_maill"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Şifre : "
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Şifrenizi giriniz..."
+                android:inputType="numberPassword"
+                android:id="@+id/edt_passwordd"
+                android:textStyle="italic"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorAccent"
+                android:text="LOGIN"
+                android:textColor="@color/mywhite"
+                android:id="@+id/btn_login"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yeni Kullanıcı!"
+                android:textStyle="bold"
+                android:id="@+id/tv_createac"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
