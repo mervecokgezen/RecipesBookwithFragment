@@ -26,15 +26,16 @@ import com.google.firebase.database.ValueEventListener;
 
 public class FragmentFoodDetail extends Fragment implements View.OnClickListener {
 
-    TextView tv_foodname, tv_fooditems, tv_foodcooking, tv_writer;
-    Button btn_fooddelete;
+    private TextView tv_foodname, tv_fooditems, tv_foodcooking,tv_supplementary, tv_writer, tv_foodid, tv_category;
+    String food_name,  food_items,  cooking,  supplementary,  writer,  food_id,  food_category;
+    private Button btn_fooddelete, btn_updatego;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference, dbRef;
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
     private String foodname;
-
+    private Food food;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceStated){
@@ -46,13 +47,24 @@ public class FragmentFoodDetail extends Fragment implements View.OnClickListener
         tv_foodcooking = (TextView)viewFood.findViewById(R.id.tv_cooking);
         btn_fooddelete = (Button)viewFood.findViewById(R.id.btn_delete);
         tv_writer      = (TextView)viewFood.findViewById(R.id.tv_writer);
+        btn_updatego   = (Button)viewFood.findViewById(R.id.btn_updatego);
 
         tv_foodname.setText(getArguments().getString("tv_foodname"));
         tv_fooditems.setText(getArguments().getString("tv_fooditems"));
         tv_foodcooking.setText(getArguments().getString("tv_cooking"));
         tv_writer.setText(getArguments().getString("tv_writer"));
 
+        food_name       = getArguments().getString("tv_foodname");
+        food_items      = getArguments().getString("tv_fooditems");
+        cooking         = getArguments().getString("tv_cooking");
+        supplementary   = getArguments().getString("tv_supplementary");
+        food_id         = getArguments().getString("food_id");
+        writer          = getArguments().getString("tv_writer");
+        food_category   = getArguments().getString("tv_foodcategory");
+
+
         btn_fooddelete.setOnClickListener(this);
+        btn_updatego.setOnClickListener(this);
 
         return viewFood;
 
@@ -86,6 +98,31 @@ public class FragmentFoodDetail extends Fragment implements View.OnClickListener
                     }
                 });
                 break;
+            }
+            case R.id.btn_updatego:{
+                Log.d("CLICK","UPDATE CLICK");
+
+                //bundle.putString("tv_foodname", food.getFood_name());
+
+                food = new Food(food_name, food_items, cooking, supplementary, food_id, writer, food_category);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("food_name",           food.getFood_name());
+                bundle.putString("food_items",          food.getFood_items());
+                bundle.putString("food_cooking",        food.getCooking());
+                bundle.putString("food_supplementary",  food.getSupplementary());
+                bundle.putString("food_id",             food.getFood_id());
+                bundle.putString("food_category",       food.getFood_category());
+                bundle.putString("user_mail",           food.getWriter());
+
+                Log.d("NAMEEEEE" ,food.getFood_name());
+
+
+                android.support.v4.app.Fragment fragment = new FragmentUpdateFood();
+                fragment.setArguments(bundle);
+
+                ((RecipesActivity) getActivity()).updateFragment(fragment);
+
             }
         }
     }

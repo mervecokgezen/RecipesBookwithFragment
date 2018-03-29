@@ -98,14 +98,19 @@ public class FragmentMyRecipes extends android.support.v4.app.Fragment {
                     public void onItemClick(View v, int position) {
                         //Log.d("position", "Tıklanan Pozisyon:" + position);
                         Food food = list_food.get(position);
+
                         android.support.v4.app.Fragment replaceFragment = null;
                         replaceFragment = new FragmentFoodDetail();
+
                         Bundle bundle = new Bundle();
+
                         bundle.putString("tv_foodname", food.getFood_name());
                         bundle.putString("tv_fooditems", food.getFood_items());
                         bundle.putString("tv_cooking", food.getCooking());
+                        bundle.putString("tv_supplementary", food.getSupplementary());
                         bundle.putString("food_id", food.getFood_id());
                         bundle.putString("writer", food.getWriter());
+                        bundle.putString("food_category", food.getFood_category());
 
                         replaceFragment.setArguments(bundle);
 

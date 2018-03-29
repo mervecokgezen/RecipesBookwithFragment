@@ -20,6 +20,9 @@
                 android:layout_height="wrap_content"
                 android:text="Food Name"
                 android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:layout_gravity="center"
+
                 android:id="@+id/tv_foodnamee"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -27,12 +30,43 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tarifi Ekleyen : "/>
+                    android:text="Yazan : "
+                    android:textStyle="italic"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="..."
+                    android:textStyle="italic"
                     android:id="@+id/tv_currentbyy"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/stargold"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/stargold"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/stargold"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/star"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/star"/>
             </LinearLayout>
 
             <TextView
@@ -40,19 +74,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="~ Malzemeler ~"
+                android:layout_gravity="center"
+                android:textStyle="bold"
                 android:textSize="20sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Food items"
-                android:textSize="20sp"
+                android:layout_marginLeft="14dp"
+                android:textSize="18sp"
                 android:id="@+id/tv_fooditemss"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:text="~ Yapılışı ~"
                 android:textSize="20sp"/>
             <TextView
@@ -60,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cooking"
                 android:layout_marginTop="8dp"
+                android:layout_marginLeft="14dp"
                 android:id="@+id/tv_cookingg"
                 android:textSize="18sp"/>
 

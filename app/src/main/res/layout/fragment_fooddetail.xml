@@ -18,7 +18,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Food Name"
-                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                android:textSize="26sp"
+                android:layout_gravity="center"
                 android:id="@+id/tv_foodname"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -26,12 +28,44 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tarifi Ekleyen : "/>
+                    android:text="Yazan : "
+                    android:textStyle="italic"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="..."
+                    android:layout_marginLeft="8dp"
                     android:id="@+id/tv_writer"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/stargold"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/stargold"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/stargold"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/star"/>
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/star"/>
             </LinearLayout>
 
             <TextView
@@ -39,13 +73,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="~ Malzemeler ~"
+                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:textSize="20sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Food items"
-                android:textSize="20sp"
+                android:layout_marginLeft="14dp"
+                android:textSize="18sp"
                 android:id="@+id/tv_fooditems"/>
 
             <TextView
@@ -53,12 +90,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="~ Yapılışı ~"
+                android:textStyle="bold"
+                android:layout_gravity="center"
                 android:textSize="20sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cooking"
                 android:layout_marginTop="8dp"
+                android:layout_marginLeft="14dp"
                 android:id="@+id/tv_cooking"
                 android:textSize="18sp"/>
             <LinearLayout
@@ -72,7 +112,8 @@
                     android:text="Düzenle"
                     android:textColor="@color/mywhite"
                     android:background="@color/colorPrimaryDark"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/btn_updatego"/>
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

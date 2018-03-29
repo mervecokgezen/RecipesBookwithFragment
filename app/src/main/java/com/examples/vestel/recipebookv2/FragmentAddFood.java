@@ -49,11 +49,12 @@ public class FragmentAddFood extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View view) {
                 foodname        = edt_foodname.getText().toString();
-                foodmetarials   =edt_foodmetarials.getText().toString();
+                foodmetarials   = edt_foodmetarials.getText().toString();
                 cooking         = edt_cooking.getText().toString();
-                String userID = firebaseAuth.getCurrentUser().getUid();
+
+                String userID   = firebaseAuth.getCurrentUser().getUid();
                 String usermail = firebaseAuth.getCurrentUser().getEmail();
-                String foodID = databaseReference.push().getKey();
+                String foodID   = databaseReference.push().getKey();
                 String food_category = "";
 
                 Food food = new Food(foodname, foodmetarials, cooking, userID, usermail, foodID, food_category);
@@ -70,8 +71,6 @@ public class FragmentAddFood extends android.support.v4.app.Fragment {
     }
 
     private void AddFood(Food food, String foodID){
-
-
 
         databaseReference.child(foodID).setValue(food);
 
